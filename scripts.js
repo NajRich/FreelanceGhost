@@ -24,3 +24,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         navMenu.classList.remove('active');
     });
 });
+
+// ScrollReveal animations (réduites pour mobiles)
+const isMobile = window.innerWidth <= 768;
+ScrollReveal().reveal('.resource-card', {
+    delay: isMobile ? 100 : 200,
+    distance: isMobile ? '30px' : '50px',
+    origin: 'bottom',
+    interval: isMobile ? 100 : 200,
+    duration: isMobile ? 600 : 800,
+    mobile: true
+});
+
+ScrollReveal().reveal('.article-card', {
+    delay: isMobile ? 100 : 200,
+    distance: isMobile ? '30px' : '50px',
+    origin: 'bottom',
+    interval: isMobile ? 100 : 200,
+    duration: isMobile ? 600 : 800,
+    mobile: true
+});
+
+ScrollReveal().reveal('#contact form', {
+    delay: isMobile ? 100 : 200,
+    distance: isMobile ? '30px' : '50px',
+    origin: 'bottom',
+    duration: isMobile ? 600 : 800,
+    mobile: true
+});
