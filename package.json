@@ -1,0 +1,9 @@
+{
+  "name": "ghost-freelancer-theme",
+  "version": "1.0.0",
+  "description": "A professional Ghost theme for learning freelancing",
+  "main": "index.hbs",
+  "engines": {
+    "ghost": ">=4.0.0"
+  }
+}
