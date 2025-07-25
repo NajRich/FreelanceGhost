@@ -1,0 +1,30 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.hero-bg {
+  background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 640px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  .grid-cols-3, .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
