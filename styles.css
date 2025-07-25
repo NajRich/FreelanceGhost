@@ -1,64 +1,266 @@
-/* Tailwind Base */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-/* Custom Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+    line-height: 1.7;
+    color: #2d3748;
+    background-color: #f7fafc;
+    overflow-x: hidden;
 }
 
-.hero-bg {
-  background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+header {
+    background: #1a202c;
+    color: #edf2f7;
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-.hover-scale {
-  transition: transform 0.3s ease;
-}
-
-.hover-scale:hover {
-  transform: scale(1.05);
-}
-
-/* Mobile Optimization */
-@media (max-width: 640px) {
-  h1, h2 {
-    font-size: 1.5rem;
-  }
-  .grid-cols-3, .grid-cols-2 {
-    grid-template-columns: 1fr;
-  }
-  nav ul {
-    flex-direction: column;
+nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-  }
-  .max-w-7xl {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+    padding: 0 24px;
 }
 
-/* Fallback styles to ensure basic visibility */
-.bg-gray-50 { background-color: #f9fafb; }
-.text-gray-900 { color: #111827; }
-.bg-white { background-color: #ffffff; }
-.shadow { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-.text-indigo-600 { color: #4f46e5; }
-.bg-indigo-600 { background-color: #4f46e5; }
-.text-gray-600 { color: #4b5563; }
-.font-bold { font-weight: 700; }
-.text-center { text-align: center; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.rounded-full { border-radius: 9999px; }
-.transition { transition: all 0.2s ease; }
+nav .logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #edf2f7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #63b3ed;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+    color: #edf2f7;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://source.unsplash.com/random/1600x900?learning');
+    background-size: cover;
+    background-position: center;
+    color: #edf2f7;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+#hero p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #3182ce;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #2b6cb0;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 6rem 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.resources-grid, .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card, .article-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover, .article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card i {
+    font-size: 2.75rem;
+    color: #3182ce;
+    margin-bottom: 1.5rem;
+}
+
+.resource-card h3, .article-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a202c;
+}
+
+.resource-card p, .article-card p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.article-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    height: 200px;
+}
+
+#contact form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#contact input, #contact textarea {
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+#contact input:focus, #contact textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+#contact textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+footer {
+    background: #1a202c;
+    color: #edf2f7;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #1a202c;
+        padding: 1.5rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 2.25rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 4rem 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.75rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 2rem;
+    }
+}
