@@ -2,89 +2,91 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Apprendre le Freelance</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Apprendre le Freelance</div>
+            <div class="logo animate__animated animate__fadeIn">Apprendre le Freelance</div>
             <ul>
-                <li><a href="#hero">Accueil</a></li>
-                <li><a href="#resources">Ressources</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#resources" class="nav-link">Ressources</a></li>
+                <li><a href="#articles" class="nav-link">Articles</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">☰</div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
-    <section id="hero">
-        <div>
+    <section id="hero" class="parallax">
+        <div class="hero-content animate__animated animate__fadeInUp">
             <h1>Devenir Freelance avec Succès</h1>
-            <p>Apprenez les compétences et stratégies pour réussir en tant que freelance</p>
-            <a href="#resources" class="btn">Découvrir les Ressources</a>
+            <p>Maîtrisez l'art du freelancing avec des ressources et conseils percutants</p>
+            <a href="#resources" class="btn btn-primary">Découvrir les Ressources</a>
         </div>
     </section>
 
     <section id="resources">
-        <h2>Ressources pour Freelances</h2>
+        <h2 class="animate__animated animate__fadeIn">Ressources pour Freelances</h2>
         <div class="resources-grid">
             <div class="resource-card">
                 <i class="fas fa-book"></i>
                 <h3>Guides Débutants</h3>
                 <p>Apprenez les bases pour démarrer votre carrière de freelance.</p>
-                <a href="#" class="btn">Voir plus</a>
+                <a href="#" class="btn btn-secondary">Voir plus</a>
             </div>
             <div class="resource-card">
                 <i class="fas fa-tools"></i>
                 <h3>Outils Essentiels</h3>
                 <p>Découvrez les outils pour gérer vos projets et clients efficacement.</p>
-                <a href="#" class="btn">Voir plus</a>
+                <a href="#" class="btn btn-secondary">Voir plus</a>
             </div>
             <div class="resource-card">
                 <i class="fas fa-dollar-sign"></i>
                 <h3>Tarification</h3>
                 <p>Conseils pour fixer vos prix et négocier avec vos clients.</p>
-                <a href="#" class="btn">Voir plus</a>
+                <a href="#" class="btn btn-secondary">Voir plus</a>
             </div>
         </div>
     </section>
 
     <section id="articles">
-        <h2>Articles & Conseils</h2>
+        <h2 class="animate__animated animate__fadeIn">Articles & Conseils</h2>
         <div class="articles-grid">
             <div class="article-card">
-                <img src="https://source.unsplash.com/random/400x300?freelance" alt="Article 1">
+                <img src="https://source.unsplash.com/random/400x300?freelance&quality=60" alt="Article 1">
                 <h3>Comment Trouver Vos Premiers Clients</h3>
                 <p>Stratégies pratiques pour décrocher vos premiers contrats freelance.</p>
-                <a href="#" class="btn">Lire l'article</a>
+                <a href="#" class="btn btn-secondary">Lire l'article</a>
             </div>
             <div class="article-card">
-                <img src="https://source.unsplash.com/random/400x300?work" alt="Article 2">
+                <img src="https://source.unsplash.com/random/400x300?work&quality=60" alt="Article 2">
                 <h3>Gérer Votre Temps en Freelance</h3>
                 <p>Conseils pour optimiser votre productivité et équilibrer votre vie.</p>
-                <a href="#" class="btn">Lire l'article</a>
+                <a href="#" class="btn btn-secondary">Lire l'article</a>
             </div>
             <div class="article-card">
-                <img src="https://source.unsplash.com/random/400x300?business" alt="Article 3">
+                <img src="https://source.unsplash.com/random/400x300?business&quality=60" alt="Article 3">
                 <h3>Créer une Marque Personnelle</h3>
                 <p>Comment vous démarquer en tant que freelance dans un marché compétitif.</p>
-                <a href="#" class="btn">Lire l'article</a>
+                <a href="#" class="btn btn-secondary">Lire l'article</a>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Posez Vos Questions</h2>
+        <h2 class="animate__animated animate__fadeIn">Posez Vos Questions</h2>
         <p>Contactez Ghost via WhatsApp : <a href="https://wa.me/+261335901034" class="whatsapp-link"><i class="fab fa-whatsapp"></i> +261 33 59 010 34</a></p>
         <form id="contact-form">
             <input type="text" placeholder="Votre nom" required>
             <input type="email" placeholder="Votre email" required>
             <textarea placeholder="Votre question ou message" required></textarea>
-            <button type="submit" class="btn">Envoyer</button>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
     </section>
 
@@ -93,6 +95,7 @@
         <p>© 2025 Apprendre le Freelance. Tous droits réservés.</p>
     </footer>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
 </html>
